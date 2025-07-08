@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+header {
+  @apply grid grid-rows-2 mx-[8rem];
+}
+
+/* --- Top Header Bar --- */
+.header-top {
+  @apply flex flex-row justify-between items-center;
+}
+
+.logo {
+  @apply w-[10rem];
+}
+
+/* --- Navigation Sections --- */
+.header-nav {
+  @apply flex flex-row items-center gap-x-20;
+}
+
+.utility-nav {
+  @apply flex flex-row gap-x-5;
+}
+
+.nav-item {
+  @apply flex font-semibold text-black hover:bg-gray-100 items-center p-3 rounded-md;
+}
+
+.language-currency {
+  @apply flex flex-row gap-2 items-center;
+}
+
+.language-currency-menu {
+  @apply max-h-[300px];
+}
+
+.language-currency-menu li {
+  @apply bg-white;
+}
+
+/* --- Auth Buttons --- */
+.btn {
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.btn-login {
+  background-color: #ffffff;
+  border-color: #006ce4;
+  color: #006ce4;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.btn-register {
+  background-color: #006ce4;
+  color: #ffffff;
+}
+
+/* --- Bottom Header Bar --- */
+.header-bottom {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center; /* Center the product links */
+  padding: 0 40px;
+}
+
+.product-nav ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  gap: 30px;
+}
+
+.product-nav ul li a {
+  display: block;
+  padding: 15px 0;
+  color: #5f6e7e;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.product-nav ul li a:hover {
+  color: #006ce4;
+}

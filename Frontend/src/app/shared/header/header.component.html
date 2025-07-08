@@ -1,0 +1,47 @@
+<header>
+  <div class="header-top">
+    <div class="logo">
+      <a href=""><img src="Logo.webp" alt="Traveloka" class="logo" /></a>
+    </div>
+
+    <nav class="header-nav">
+      <div class="utility-nav">
+        <p-menu #menu [model]="countryLanguageCurrency" [popup]="true">
+          <ng-template #item let-item>
+            <a href="#" mat-menu-item
+              ><span class="{{ item.flag }}"></span> {{ item.country }} ({{
+                item.language
+              }})
+            </a>
+          </ng-template>
+        </p-menu>
+        <a (click)="menu.toggle($event)" class="nav-item language-currency">
+          <span class="{{ flag }}"></span> VI | VND ▾
+        </a>
+        <a href="#" class="nav-item">
+          <span class="icon promo-icon">%</span> Khuyến mãi
+        </a>
+        <a href="#" class="nav-item">Hỗ trợ ▾</a>
+        <a href="#" class="nav-item">Hợp tác với chúng tôi</a>
+        <a href="#" class="nav-item">Đặt chỗ của tôi</a>
+      </div>
+
+      <div class="auth-buttons">
+        <auth-dialog />
+        <button class="btn btn-register">Đăng ký</button>
+      </div>
+    </nav>
+  </div>
+
+  <div class="header-bottom">
+    <nav class="product-nav">
+      <ul>
+        @for(product of productLinks; track product) {
+        <li>
+          <a [href]="product.url">{{ product.name }}</a>
+        </li>
+        }
+      </ul>
+    </nav>
+  </div>
+</header>

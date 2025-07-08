@@ -1,0 +1,23 @@
+<p-button (click)="showDialog()" label="Đăng nhập / Đăng ký" />
+<p-dialog [modal]="true" [(visible)]="visible" [style]="{ width: '25rem' }">
+  <div class="auth-form">
+    <label for="emailOrPhone">Email/Số điện thoại di động </label>
+    <input pInputText id="emailOrPhone" autocomplete="on" />
+  </div>
+  <p-button label="Tiếp tục" (click)="visible = false" />
+  <div class="alternative-auth">
+    <div class="alernative-auth-title">
+      <br />
+      <span>hoặc đăng nhập/đăng ký với</span>
+      <br />
+    </div>
+    <p-button label="Apple" (click)="visible = false" />
+    <p-button label="Google" (click)="visible = false" />
+    <p-button label="Facebook" (click)="visible = false" />
+  </div>
+  <div class="disclamer">
+    Bằng cách tiếp tục, bạn đồng ý với <span>Điều khoản và Điều kiện</span> này
+    và bạn đã được thông báo về <span>Chính sách bảo vệ dữ liệu</span> của chúng
+    tôi.
+  </div>
+</p-dialog>

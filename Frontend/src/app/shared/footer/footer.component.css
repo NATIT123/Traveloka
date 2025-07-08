@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+footer {
+  @apply bg-gray-900;
+}
+
+.footer-content {
+  @apply mx-[8rem] flex flex-row justify-between items-center;
+}
+
+.app-logo {
+  @apply w-[15rem];
+}
