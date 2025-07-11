@@ -22,7 +22,7 @@ import (
 
 func newService() goservice.Service {
 	service := goservice.New(
-		goservice.WithName("traveloka"),
+		goservice.WithName("Traveloka"),
 		goservice.WithVersion("1.0.0"),
 		goservice.WithInitRunnable(sdkgorm.NewGormDB("Traveloka", common.PluginDBMain)),
 		// goservice.WithInitRunnable(jwt.NewTokenJWTProvider(common.PluginJWT)),

@@ -62,6 +62,12 @@ func (UserLogin) TableName() string {
 	return User{}.TableName()
 }
 
+type UserUpdate struct {
+	LastName  *string          `json:"lastname" gorm:"column:lastname;"`
+	FirstName string           `json:"firstname" gorm:"column:firstname"`
+	Status    *enum.UserStatus `json:"status" gorm:"column:status;"`
+}
+
 var (
 	ErrEmailOrPasswordInvalid = common.NewCustomError(
 		errors.New("email or password invalid"),
